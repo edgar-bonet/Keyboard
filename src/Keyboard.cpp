@@ -239,6 +239,7 @@ size_t Keyboard_::press(uint8_t k)
 		}
 		if (k & 0x80) {						// it's a capital letter or other character reached with shift
 			_keyReport.modifiers |= 0x02;	// the left shift modifier
+			sendReport(&_keyReport);		// send the shift key by itself first
 			k &= 0x7F;
 		}
 	}
