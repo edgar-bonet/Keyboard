@@ -104,9 +104,11 @@ size_t Keyboard_::press(uint8_t k)
 		}
 		if ((k & ALT_GR) == ALT_GR) {
 			_keyReport.modifiers |= 0x40;   // AltGr = right Alt
+			sendReport(&_keyReport);		// send the AltGr key by itself first
 			k &= 0x3F;
 		} else if ((k & SHIFT) == SHIFT) {
 			_keyReport.modifiers |= 0x02;	// the left shift modifier
+			sendReport(&_keyReport);		// send the shift key by itself first
 			k &= 0x7F;
 		}
 		if (k == ISO_REPLACEMENT) {
