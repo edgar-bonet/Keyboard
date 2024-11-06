@@ -15,7 +15,7 @@ on:
 
 jobs:
   report:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Comment size deltas reports to PRs
         uses: arduino/report-size-deltas@v1
