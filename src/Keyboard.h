@@ -114,6 +114,7 @@
 extern const uint8_t KeyboardLayout_de_DE[];
 extern const uint8_t KeyboardLayout_en_US[];
 extern const uint8_t KeyboardLayout_es_ES[];
+extern const uint8_t KeyboardLayout_es_LATAM[];
 extern const uint8_t KeyboardLayout_fr_FR[];
 extern const uint8_t KeyboardLayout_it_IT[];
 extern const uint8_t KeyboardLayout_pt_BR[];
